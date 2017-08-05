@@ -11,10 +11,13 @@ import { AdoptingPhaseComponent } from './quizz/adopting-phase/adopting-phase.co
 import { HomeComponent } from './home/home.component';
 import { FeedComponent } from './home/main/feed/feed.component';
 import { AdventureComponent } from './home/main/adventure/adventure.component';
-import { StomachComponent } from './home/pet/stomach/stomach.component';
 import {RouterModule, Routes} from '@angular/router';
-import { PetComponent } from './home/pet/pet.component';
-import { StatusComponent } from './home/pet/status/status.component';
+import { PetComponent } from './home/main/pet/pet.component';
+import { StatusComponent } from './home/status/status.component';
+import {MainComponent} from './home/main/main.component';
+import { StomachComponent } from './home/main/stomach/stomach.component';
+import { FoodListComponent } from './home/main/stomach/food-list/food-list.component';
+import { FoodComponent } from './home/main/stomach/food-list/food/food.component';
 
 
 
@@ -22,7 +25,6 @@ const appRoutes: Routes = [
   {path: '' , component: AuthenticationComponent },
   {path: 'quizz' , component: QuizzComponent },
   {path: 'home' , component: HomeComponent },
-  {path: 'home/pet/stomach' , component: StomachComponent },
 ];
 
 @NgModule({
@@ -34,9 +36,12 @@ const appRoutes: Routes = [
     HomeComponent,
     FeedComponent,
     AdventureComponent,
-    StomachComponent,
     PetComponent,
     StatusComponent,
+    MainComponent,
+    StomachComponent,
+    FoodListComponent,
+    FoodComponent,
   ],
   imports: [
     BrowserModule,
