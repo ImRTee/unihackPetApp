@@ -17,6 +17,22 @@ import {RouterModule, Routes} from '@angular/router';
 import { PetComponent } from './home/pet/pet.component';
 import { StatusComponent } from './home/pet/status/status.component';
 import { ToolsComponent } from './home/tools/tools.component';
+import { AngularFireModule } from 'angularfire2';
+import { LoginComponent } from './login/login.component';
+import { EmailComponent } from './email/email.component';
+import { SignupComponent } from './signup/signup.component';
+import { MembersComponent } from './members/members.component';
+import { AuthGuard } from './auth.service';
+import { routes } from './app.routes';
+
+export const firebaseConfig = {
+  apiKey: 'AIzaSyDhF9G9rFJ7inda2Y-PpQmVMesEHj86K_0',
+  authDomain: 'unihack-1d5fb.firebaseapp.com',
+  databaseURL: 'https://unihack-1d5fb.firebaseio.com',
+  projectId: 'unihack-1d5fb',
+  storageBucket: 'unihack-1d5fb.appspot.com',
+  messagingSenderId: '588754196946'
+};
 
 const appRoutes: Routes = [
   {path: '' , component: AuthenticationComponent },
@@ -38,15 +54,20 @@ const appRoutes: Routes = [
     HelpComponent,
     PetComponent,
     StatusComponent,
-    ToolsComponent
+    ToolsComponent,
+    LoginComponent,
+    EmailComponent,
+    SignupComponent,
+    MembersComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
