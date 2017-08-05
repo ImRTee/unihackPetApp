@@ -9,10 +9,20 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import { QuizzComponent } from './quizz/quizz.component';
 import { AdoptingPhaseComponent } from './quizz/adopting-phase/adopting-phase.component';
 import { HomeComponent } from './home/home.component';
-import { FeedComponent } from './home/feed/feed.component';
-import { AdventureComponent } from './home/adventure/adventure.component';
-import { StomachComponent } from './home/stomach/stomach.component';
-import { HelpComponent } from './home/help/help.component';
+import { FeedComponent } from './home/tools/feed/feed.component';
+import { AdventureComponent } from './home/tools/adventure/adventure.component';
+import { StomachComponent } from './home/pet/stomach/stomach.component';
+import { HelpComponent } from './home/tools/help/help.component';
+import {RouterModule, Routes} from '@angular/router';
+import { PetComponent } from './home/pet/pet.component';
+import { StatusComponent } from './home/pet/status/status.component';
+import { ToolsComponent } from './home/tools/tools.component';
+
+const appRoutes: Routes = [
+  {path: '' , component: AuthenticationComponent },
+  {path: 'quizz' , component: QuizzComponent },
+  {path: 'home' , component: HomeComponent }
+];
 
 @NgModule({
   declarations: [
@@ -24,12 +34,16 @@ import { HelpComponent } from './home/help/help.component';
     FeedComponent,
     AdventureComponent,
     StomachComponent,
-    HelpComponent
+    HelpComponent,
+    PetComponent,
+    StatusComponent,
+    ToolsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
