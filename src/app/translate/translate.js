@@ -27,8 +27,8 @@ app.post('/translate', function (req, res, next) {
 
 app.get('/translate/:word', function(req,res,next) {
   var word = req.params.word
-  translate(word, {to: 'en'}).then(res => {
-    console.log(res.text);
+  translate(word, {to: 'en'}).then(something => {
+    res.send(something.text);
 }).catch(err => {
     console.error(err);
 })
