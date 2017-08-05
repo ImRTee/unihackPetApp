@@ -21,7 +21,8 @@ import { ToolsComponent } from './home/tools/tools.component';
 const appRoutes: Routes = [
   {path: '' , component: AuthenticationComponent },
   {path: 'quizz' , component: QuizzComponent },
-  {path: 'home' , component: HomeComponent }
+  {path: 'home' , component: HomeComponent },
+  {path: 'home/pet/stomach' , component: StomachComponent },
 ];
 
 @NgModule({
