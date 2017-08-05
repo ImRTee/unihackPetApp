@@ -9,20 +9,23 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import { QuizzComponent } from './quizz/quizz.component';
 import { AdoptingPhaseComponent } from './quizz/adopting-phase/adopting-phase.component';
 import { HomeComponent } from './home/home.component';
-import { FeedComponent } from './home/tools/feed/feed.component';
-import { AdventureComponent } from './home/tools/adventure/adventure.component';
-import { StomachComponent } from './home/pet/stomach/stomach.component';
-import { HelpComponent } from './home/tools/help/help.component';
+import { FeedComponent } from './home/main/feed/feed.component';
+import { AdventureComponent } from './home/main/adventure/adventure.component';
 import {RouterModule, Routes} from '@angular/router';
-import { PetComponent } from './home/pet/pet.component';
-import { StatusComponent } from './home/pet/status/status.component';
-import { ToolsComponent } from './home/tools/tools.component';
+import { PetComponent } from './home/main/pet/pet.component';
+import { StatusComponent } from './home/status/status.component';
+import {MainComponent} from './home/main/main.component';
+import { StomachComponent } from './home/main/stomach/stomach.component';
+import { FoodListComponent } from './home/main/stomach/food-list/food-list.component';
+import { FoodComponent } from './home/main/stomach/food-list/food/food.component';
+import {FoodDesComponent} from "./home/main/stomach/food-des/food-des.component";
+
+
 
 const appRoutes: Routes = [
   {path: '' , component: AuthenticationComponent },
   {path: 'quizz' , component: QuizzComponent },
   {path: 'home' , component: HomeComponent },
-  {path: 'home/pet/stomach' , component: StomachComponent },
 ];
 
 @NgModule({
@@ -34,11 +37,13 @@ const appRoutes: Routes = [
     HomeComponent,
     FeedComponent,
     AdventureComponent,
-    StomachComponent,
-    HelpComponent,
     PetComponent,
     StatusComponent,
-    ToolsComponent
+    MainComponent,
+    StomachComponent,
+    FoodListComponent,
+    FoodComponent,
+    FoodDesComponent
   ],
   imports: [
     BrowserModule,
