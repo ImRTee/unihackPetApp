@@ -33,7 +33,7 @@ app.get('/translate/:word', function(req,res,next) {
     console.error(err);
 })
 });
-// console
+// console.log
 // app.get('/translate', function (req, res) {
 //   res.send(translate(something, {to: 'en'}).then(res => {
 //     console.log(res.text);
