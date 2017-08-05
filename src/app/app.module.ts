@@ -19,6 +19,7 @@ import { StomachComponent } from './home/main/stomach/stomach.component';
 import { FoodListComponent } from './home/main/stomach/food-list/food-list.component';
 import { FoodComponent } from './home/main/stomach/food-list/food/food.component';
 import {FoodDesComponent} from "./home/main/stomach/food-des/food-des.component";
+import { FoodItemComponent } from './home/main/stomach/src/app/home/main/stomach/food-list/food-item/food-item.component';
 
 
 
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     StomachComponent,
     FoodListComponent,
     FoodComponent,
-    FoodDesComponent
+    FoodDesComponent,
+    FoodItemComponent
   ],
   imports: [
     BrowserModule,
