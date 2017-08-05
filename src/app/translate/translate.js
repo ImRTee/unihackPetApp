@@ -1,10 +1,54 @@
-var translate = require('google-translate-api')
+var translate = require('google-translate-api');
+var path = require('path');
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
 
-var word = 
+// Define the port to run on
+app.set('port', 63342);
 
-translate('Ik spreek Engels', {to: 'en'}).then(res => {
-  console.log(res.text);
-//=> print translation of word in English
-}).catch(err => {
-  console.error(err);
+//app.use('/static', express.static(path.join(__dirname, 'public')))
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+app.use(bodyParser.json());
+
+app.get('/',function(req,res,next) {
+  res.sendFile(path.join(__dirname+'/public/index.html'))
 });
+
+// req.body.word
+app.post('/translate', function (req, res, next) {
+  var word = req.body.word;
+  res.redirect('/translate/' + word );
+});
+
+app.get('/translate/:word', function(req,res,next) {
+  var word = req.params.word
+  translate(word, {to: 'en'}).then(res => {
+    console.log(res.text);
+}).catch(err => {
+    console.error(err);
+})
+});
+
+// app.get('/translate', function (req, res) {
+//   res.send(translate(something, {to: 'en'}).then(res => {
+//     console.log(res.text);
+// }).catch(err => {
+//     console.error(err);
+// }));
+// })
+
+
+// Listen for requests
+var server = app.listen(app.get('port'), function() {
+  var port = server.address().port;
+  console.log('Magic happens on port ' + port);
+});
+
+// app.listen(3000, function () {
+//   console.log('Example app listening on port 63342!')
+// });
