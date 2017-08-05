@@ -1,3 +1,75 @@
-<p>
-  quizz works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <h1>Quiz Time</h1>
+        <h4>Question 1</h4>
+        <p>Can you focus on something you like?</p>
+        <div class="form-group">
+
+          <select
+            id="focus"
+            class="form-control"
+            [ngModel]="defaultQuestion"
+            name="focus"
+            >
+
+            <option value="like">Yes</option>
+            <option value="hate">No</option>
+            <option value="maybe">Maybe</option>
+          </select>
+        </div>
+        <h4>Question 2</h4>
+        <p>When the going gets tough, do you get going?</p>
+        <div class="form-group">
+
+          <select
+            id="tough"
+            class="form-control"
+            ngModel
+            [ngModel]="defaultQuestion2"
+            name="tough">
+            <option value="going">Yes</option>
+            <option value="no-going">No</option>
+            <option value="maybe-going">Maybe</option>
+          </select>
+        </div>
+        <h4>Question 3</h4>
+        <p>There is a bucket. If you put water in it, how high will you fill it?</p>
+        <div class="form-group">
+
+          <select
+            id="water"
+            class="form-control"
+            ngModel
+            [ngModel]="defaultQuestion3"
+            name="water">
+            <option value="full">Full</option>
+            <option value="half">Half</option>
+            <option value="little">Little</option>
+          </select>
+        </div>
+        <h4>Question 4</h4>
+        <p>What's your favourite part of the day?</p>
+        <div class="form-group">
+
+          <select
+            id="day"
+            class="form-control"
+            ngModel
+            [ngModel]="defaultQuestion4"
+            name="day"
+            >
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="night">Night</option>
+          </select>
+        </div>
+        <button
+          class="btn btn-primary"
+          type="submit"
+          >Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
