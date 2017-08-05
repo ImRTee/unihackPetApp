@@ -17,6 +17,7 @@ rl.close();
 function wordLookup (word) {
 
   var gloss = [];
+  var synonyms = [];
 
   wordnet.lookup(word, function(err,definitions) {
     if (err) {
@@ -28,8 +29,6 @@ function wordLookup (word) {
       console.log(definitions);
 
       definitions.forEach(function(definition) {
-
-
 
         function checkDuplicate(gloss, synsetOffset) {
           //console.log('gloss: '+ gloss);
