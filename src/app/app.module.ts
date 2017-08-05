@@ -5,14 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { AuthenticationComponent } from './src/app/authentication/authentication.component';
-import { QuizzComponent } from './src/app/quizz/quizz.component';
-import { AdoptingPhaseComponent } from './src/app/quizz/adopting-phase/adopting-phase.component';
-import { HomeComponent } from './src/app/home/home.component';
-import { FeedComponent } from './src/app/home/feed/feed.component';
-import { AdventureComponent } from './src/app/home/adventure/adventure.component';
-import { StomachComponent } from './src/app/home/stomach/stomach.component';
-import { HelpComponent } from './src/app/home/help/help.component';
+import { AuthenticationComponent } from './authentication/authentication.component';
+import { QuizzComponent } from './quizz/quizz.component';
+import { AdoptingPhaseComponent } from './quizz/adopting-phase/adopting-phase.component';
+import { HomeComponent } from './home/home.component';
+import { FeedComponent } from './home/feed/feed.component';
+import { AdventureComponent } from './home/adventure/adventure.component';
+import { StomachComponent } from './home/stomach/stomach.component';
+import { HelpComponent } from './home/help/help.component';
 
 @NgModule({
   declarations: [
