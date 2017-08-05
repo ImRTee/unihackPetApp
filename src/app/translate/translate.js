@@ -33,14 +33,6 @@ app.get('/translate/:word', function(req,res,next) {
     console.error(err);
 })
 });
-// console.log
-// app.get('/translate', function (req, res) {
-//   res.send(translate(something, {to: 'en'}).then(res => {
-//     console.log(res.text);
-// }).catch(err => {
-//     console.error(err);
-// }));
-// })
 
 
 // Listen for requests
@@ -49,6 +41,3 @@ var server = app.listen(app.get('port'), function() {
   console.log('Magic happens on port ' + port);
 });
 
-// app.listen(3000, function () {
-//   console.log('Example app listening on port 63342!')
-// });
