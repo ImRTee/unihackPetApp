@@ -25,12 +25,9 @@
     "animate.css": "^3.5.2",
     "bootstrap": "^4.0.0-alpha.6",
     "core-js": "^2.4.1",
-<<<<<<< HEAD
     "express": "^4.15.3",
     "nodemon": "^1.11.0",
-=======
     "firebase": "^4.2.0",
->>>>>>> bf448af07719f06cf9859b334210c089065524ca
     "rxjs": "^5.1.0",
     "wordnet": "^0.1.2",
     "zone.js": "^0.8.4"
