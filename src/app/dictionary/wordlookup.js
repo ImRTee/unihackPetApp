@@ -1,8 +1,10 @@
 var wordnet = require('wordnet');
 
+var dictionary = [];
+
 exports.wordLookup = function(word) {
 
-	var dictionary = [];
+
 
 	wordnet.lookup(word, function(err,definitions) {
 		if (err) {
@@ -61,9 +63,8 @@ exports.wordLookup = function(word) {
         fillDictionary(definition,true);
 			});
 		}
-    while (dictionary === undefined) {
-		  require('deasync').runLoopOnce();
-    }
+    console.log('hello');
+    console.log(dictionary)
     return dictionary;
 	});
 };

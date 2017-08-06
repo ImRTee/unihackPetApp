@@ -19,7 +19,7 @@ app.get('/test',function(req,res,next) {
 })
 
 app.post('/postWord',function(req,res,next) {
-  console.log(req.body.word);
+  console.log(req.body.wrd);
 });
 
 app.listen(3000, function() {
