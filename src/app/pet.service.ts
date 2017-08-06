@@ -1,12 +1,12 @@
-import {Food} from "./shared/food.module";
-import {Pet} from "./shared/pet.module";
+import {Food} from "./home/shared/food.module";
+import {Pet} from "./home/shared/pet.module";
 
 export class PetService{
   private petObj = new Pet(
-    'Donny',
+    'DoDo',
     1,
     0,
-    'http://cdn.wallpapersafari.com/90/92/bfaDk7.jpg',
+    'https://s-media-cache-ak0.pinimg.com/736x/cb/eb/46/cbeb46a7bcde12bea4ff0e7f06b70a03--cartoon-foxes-cartoon-fox-drawing.jpg',
     [
       new Food('Donut', 'Ring look-like bread'),
       new Food('Banana', 'Fruit that monkeys eat')
@@ -18,5 +18,6 @@ export class PetService{
   getPetObj() {
     return this.petObj;
   }
+
 
 }

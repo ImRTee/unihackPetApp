@@ -7,7 +7,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { QuizzComponent } from './quizz/quizz.component';
-import { AdoptingPhaseComponent } from './quizz/adopting-phase/adopting-phase.component';
+import { AdoptingPhaseComponent } from './adopting-phase/adopting-phase.component';
 import { HomeComponent } from './home/home.component';
 import { FeedComponent } from './home/main/feed/feed.component';
 import { AdventureComponent } from './home/main/adventure/adventure.component';
@@ -19,12 +19,14 @@ import { StomachComponent } from './home/main/stomach/stomach.component';
 import { FoodListComponent } from './home/main/stomach/food-list/food-list.component';
 import {FoodDesComponent} from './home/main/stomach/food-des/food-des.component';
 import { FoodItemComponent } from './home/main/stomach/food-list/food-item/food-item.component';
+import {PetService} from "./pet.service";
 
 
 const appRoutes: Routes = [
   {path: '' , component: AuthenticationComponent },
   {path: 'quizz' , component: QuizzComponent },
-  {path: 'home' , component: HomeComponent },
+  {path: 'adopting' , component: AdoptingPhaseComponent },
+  {path: 'home', component: HomeComponent }
 ];
 
 @NgModule({
@@ -50,7 +52,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [PetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

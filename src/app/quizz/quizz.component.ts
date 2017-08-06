@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import {NgForm} from '@angular/forms';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-quizz',
@@ -8,6 +9,7 @@ import {NgForm} from '@angular/forms';
 })
 export class QuizzComponent {
   @ViewChild('f') signupForm: NgForm;
+  constructor( private router: Router){}
   defaultQuestion = 'like';
   defaultQuestion2 = 'going';
   defaultQuestion3 = 'full';
@@ -15,10 +17,8 @@ export class QuizzComponent {
   suggestUserName() {
     const suggestedName = 'Superuser';
   }
-    // onSubmit(form: NgForm) {
-    // console.log(form);
-    // }
+
     onSubmit() {
-      console.log(this.signupForm);
+      this.router.navigate(['/adopting']);
     }
 }

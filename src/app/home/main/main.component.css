@@ -2,15 +2,15 @@
   display: flex;
   flex-wrap: nowrap;
   text-align: center;
-  width: 400px;
+  width: 475px;
   margin: auto;
 }
 .navigation-container{
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .nav-item{
   width: 250px;
-  padding:30px;
+  padding:25px;
   font-size: 1.5em;
   background-color: dodgerblue;
   cursor: pointer;
