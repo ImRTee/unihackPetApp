@@ -15,6 +15,7 @@ export class MainComponent implements OnInit {
 
   onNavigate(selectedFeature: string){
     this.feature = selectedFeature;
+    this.isFeeding = false;
   }
   onFeeding(){
     this.isFeeding = !this.isFeeding;
