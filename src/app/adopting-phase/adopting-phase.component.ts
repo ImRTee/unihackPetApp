@@ -18,7 +18,6 @@ export class AdoptingPhaseComponent implements OnInit {
   }
   submitName(nameSubmitted: string){
     this.petName = nameSubmitted;
-    this.petServ.adotingPet(this.petName);
     this.router.navigate(['/home']);
   }
   onGoToHome(){
