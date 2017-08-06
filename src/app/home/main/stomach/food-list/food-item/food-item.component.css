@@ -1,0 +1,10 @@
+.food-item{
+  padding:20px;
+  font-size:1.4em;
+  background-color: lemonchiffon;
+  cursor: pointer;
+}
+
+.food-item:hover{
+  background-color: wheat;
+}

@@ -17,10 +17,8 @@ import { StatusComponent } from './home/status/status.component';
 import {MainComponent} from './home/main/main.component';
 import { StomachComponent } from './home/main/stomach/stomach.component';
 import { FoodListComponent } from './home/main/stomach/food-list/food-list.component';
-import { FoodComponent } from './home/main/stomach/food-list/food/food.component';
-import {FoodDesComponent} from "./home/main/stomach/food-des/food-des.component";
-import { FoodItemComponent } from './home/main/stomach/src/app/home/main/stomach/food-list/food-item/food-item.component';
-
+import {FoodDesComponent} from './home/main/stomach/food-des/food-des.component';
+import { FoodItemComponent } from './home/main/stomach/food-list/food-item/food-item.component';
 
 
 const appRoutes: Routes = [
@@ -43,7 +41,6 @@ const appRoutes: Routes = [
     MainComponent,
     StomachComponent,
     FoodListComponent,
-    FoodComponent,
     FoodDesComponent,
     FoodItemComponent
   ],
