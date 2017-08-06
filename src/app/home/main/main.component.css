@@ -1,0 +1,31 @@
+.nav-bar{
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+  width: 400px;
+  margin: auto;
+}
+.navigation-container{
+  margin-top: 30px;
+}
+.nav-item{
+  width: 200px;
+  padding:30px;
+  font-size: 1.5em;
+  background-color: dodgerblue;
+  cursor: pointer;
+}
+.nav-item:hover{
+  background-color: blue;
+}
+.main-section {
+  position: relative;
+
+}
+.feed-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+

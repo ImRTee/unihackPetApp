@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {PetService} from "../../../pet.service";
+import {Food} from "../../../shared/food.module";
 
 @Component({
   selector: 'app-food-list',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./food-list.component.css']
 })
 export class FoodListComponent implements OnInit {
-
-  constructor() { }
+  foods: Food[];
+  constructor(private petServ: PetService) { }
 
   ngOnInit() {
+    this.foods = this.petServ.getPetObj().stomach;
   }
 
 }

@@ -1,3 +1,19 @@
-<div class="changable-container">
-  <app-pet></app-pet>
+<div class="main-section">
+<div class="changable-container" style="height: 380px">
+  <app-pet *ngIf="feature === 'Pet'"></app-pet>
+  <app-adventure  *ngIf="feature === 'Adventure'"></app-adventure>
+  <app-stomach  *ngIf="feature === 'Stomach'"></app-stomach>
+  <div class="feed-container">
+    <app-feed  *ngIf="isFeeding"></app-feed>
+  </div>
+
+</div>
+<div class="navigation-container">
+  <div class="nav-bar">
+    <div class="nav-item" (click)="onNavigate('Pet')">Pet</div>
+    <div class="nav-item" (click)="onFeeding()">Feed</div>
+    <div class="nav-item" (click)="onNavigate('Adventure')">Adventure</div>
+    <div class="nav-item" (click)="onNavigate('Stomach')">Stomach</div>
+  </div>
+</div>
 </div>

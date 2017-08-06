@@ -2,4 +2,13 @@
   <div class="col-md-6 food-list-container">
     <app-food-list></app-food-list>
   </div>
+  <div class="col-md-6 food-des-container">
+    <app-food-des
+      [food]="selectedFood"
+      *ngIf="selectedFood; else infoText"
+    ></app-food-des>
+    <ng-template #infoText>
+      Click on the food to see how it was made;
+    </ng-template>
+  </div>
 </div>
