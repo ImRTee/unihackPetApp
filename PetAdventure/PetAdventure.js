@@ -1,4 +1,4 @@
-1//cited from https://codepen.io/nikola1970/pen/oxXbmb
+//cited from https://codepen.io/nikola1970/pen/oxXbmb
 var temp = document.querySelector('.time');
 var button = document.querySelector("button");
 var words = document.querySelector(".words");
@@ -8,6 +8,7 @@ var points = 0;
 var spans;
 var typed;
 var seconds = 60;
+var spark = new Audio ("http://k003.kiwi6.com/hotlink/qdpr7bioht/spark.mp3");
 
 function countdown() {
     points = 0;
