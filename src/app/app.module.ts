@@ -11,7 +11,6 @@ import { AdoptingPhaseComponent } from './adopting-phase/adopting-phase.componen
 import { HomeComponent } from './home/home.component';
 import { FeedComponent } from './home/main/feed/feed.component';
 import { AdventureComponent } from './home/main/adventure/adventure.component';
-import {RouterModule, Routes} from '@angular/router';
 import { PetComponent } from './home/main/pet/pet.component';
 import { StatusComponent } from './home/status/status.component';
 import {MainComponent} from './home/main/main.component';
@@ -19,21 +18,14 @@ import { StomachComponent } from './home/main/stomach/stomach.component';
 import { FoodListComponent } from './home/main/stomach/food-list/food-list.component';
 import {FoodDesComponent} from './home/main/stomach/food-des/food-des.component';
 import { FoodItemComponent } from './home/main/stomach/food-list/food-item/food-item.component';
-import {PetService} from "./pet.service";
-import { LoginComponent } from './authentication/src/app/authentication/login/login.component';
-import { SignupComponent } from './authentication/src/app/authentication/signup/signup.component';
+import {PetService} from './pet.service';
+import { LoginComponent } from './authentication/login/login.component';
+import { SignupComponent } from './authentication/signup/signup.component';
+import {AppRoutesModule} from "./app-routing.module";
+import { PageNotFoundComponent } from './src/app/page-not-found/page-not-found.component';
 
 
-const appRoutes: Routes = [
-  {path: '' , component: AuthenticationComponent },
-  {path: 'quizz' , component: QuizzComponent },
-  {path: 'adopting' , component: AdoptingPhaseComponent },
-  {path: 'home', component: HomeComponent , children: [
-    {path: 'adventure', component: AdventureComponent},
-    {path: 'pet', component: PetComponent},
-    {path: 'stomach', component: StomachComponent}
-  ]}
-];
+
 
 @NgModule({
   declarations: [
@@ -52,13 +44,14 @@ const appRoutes: Routes = [
     FoodDesComponent,
     FoodItemComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutesModule
   ],
   providers: [PetService],
   bootstrap: [AppComponent]
