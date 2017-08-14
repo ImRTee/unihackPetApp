@@ -1,7 +1,9 @@
 import {Food} from "./home/shared/food.module";
 import {Pet} from "./home/shared/pet.module";
+import {Subject} from "rxjs/Subject";
 
-export class PetService{
+export class PetService {
+  petNamed = new Subject();
   private petObj = new Pet(
     'DoDo',
     1,
@@ -15,9 +17,11 @@ export class PetService{
     0
   );
 
+
   getPetObj() {
     return this.petObj;
   }
+
 
 
 }

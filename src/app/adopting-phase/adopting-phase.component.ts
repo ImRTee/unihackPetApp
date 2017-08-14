@@ -16,13 +16,9 @@ export class AdoptingPhaseComponent implements OnInit {
   ngOnInit() {
     this.petObj = this.petServ.getPetObj();
   }
-  submitName(nameSubmitted: string){
-    this.petName = nameSubmitted;
-    this.router.navigate(['/home']);
+  submitName() {
+    this.petServ.petNamed.next(this.petName);
+    this.router.navigate(['/home', 'pet']);
   }
-  onGoToHome(){
-    this.router.navigate(['/home']);
-  }
-
 
 }

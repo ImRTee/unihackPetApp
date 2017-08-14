@@ -4,11 +4,10 @@
     <img src="{{petObj.picture}}" style="border-radius: 50%; width: 400px; height: 400px">
   </div>
 
-  <h1>His name is DoDO</h1>
-  <button class="btn btn-success"(click)="onGoToHome()" >Next!</button>
-<!--<div class="naming">-->
-  <!--<input type="text/input" #nameInput>-->
-  <!--<button class="btn btn-success" (click)="submitName(nameInput)" > Name Me!</button>-->
-<!--</div>-->
+
+<div class="naming">
+  <input type="text/input" [(ngModel)]="petName" name="petName" >
+  <button class="btn btn-success" (click)="submitName()" > Name Me!</button>
+</div>
 
 </div>

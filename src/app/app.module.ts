@@ -20,13 +20,19 @@ import { FoodListComponent } from './home/main/stomach/food-list/food-list.compo
 import {FoodDesComponent} from './home/main/stomach/food-des/food-des.component';
 import { FoodItemComponent } from './home/main/stomach/food-list/food-item/food-item.component';
 import {PetService} from "./pet.service";
+import { LoginComponent } from './authentication/src/app/authentication/login/login.component';
+import { SignupComponent } from './authentication/src/app/authentication/signup/signup.component';
 
 
 const appRoutes: Routes = [
   {path: '' , component: AuthenticationComponent },
   {path: 'quizz' , component: QuizzComponent },
   {path: 'adopting' , component: AdoptingPhaseComponent },
-  {path: 'home', component: HomeComponent }
+  {path: 'home', component: HomeComponent , children: [
+    {path: 'adventure', component: AdventureComponent},
+    {path: 'pet', component: PetComponent},
+    {path: 'stomach', component: StomachComponent}
+  ]}
 ];
 
 @NgModule({
@@ -44,7 +50,9 @@ const appRoutes: Routes = [
     StomachComponent,
     FoodListComponent,
     FoodDesComponent,
-    FoodItemComponent
+    FoodItemComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

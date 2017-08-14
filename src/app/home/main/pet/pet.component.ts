@@ -9,11 +9,17 @@ import {Pet} from "../../shared/pet.module";
 })
 export class PetComponent implements OnInit {
   petObj: Pet;
-
+  petName: string;
   constructor(private petService: PetService) { }
 
   ngOnInit() {
     this.petObj = this.petService.getPetObj();
+    this.petService.petNamed.subscribe(
+      (name: string) => {
+        console.log(name);
+        this.petObj.name = name;
+    }
+    );
   }
 
 }
