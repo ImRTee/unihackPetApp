@@ -1,16 +1,27 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <form>
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div id="user-data">
-          <button class="btn btn-primary" type="button">Log In With Google</button>
+          <button class="btn btn-primary" type="button" (click)="loginGoogle()" >Log In With Google</button>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" class="form-control">
+            <input type="email"
+                   id="email"
+                   name="email"
+                   class="form-control"
+                   ngModel=""
+                   required
+                   email>
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="text" id="password" class="form-control">
+            <input type="text"
+                   id="password"
+                   name="password"
+                   class="form-control"
+                   ngModel
+                   required>
           </div>
         </div>
         <div class="col-sm-12">

@@ -16,12 +16,7 @@ export class PetService {
     100,
     0
   );
-
-
   getPetObj() {
     return this.petObj;
   }
-
-
-
 }

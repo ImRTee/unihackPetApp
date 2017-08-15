@@ -22,9 +22,20 @@ import {PetService} from './pet.service';
 import { LoginComponent } from './authentication/login/login.component';
 import { SignupComponent } from './authentication/signup/signup.component';
 import {AppRoutesModule} from "./app-routing.module";
-import { PageNotFoundComponent } from './src/app/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {AngularFireModule} from "angularfire2";
+import {AngularFireAuthModule} from "angularfire2/auth";
+import {AngularFireDatabaseModule} from "angularfire2/database";
+import { NavBarComponent } from './home/nav-bar/nav-bar.component';
 
-
+export const firebaseConfig = {
+  apiKey: "AIzaSyB2igeX7J0wK0-b2l8P-7p7xgGxY6jvJG0",
+  authDomain: "virtual-pet-2017.firebaseapp.com",
+  databaseURL: "https://virtual-pet-2017.firebaseio.com",
+  projectId: "virtual-pet-2017",
+  storageBucket: "virtual-pet-2017.appspot.com",
+  messagingSenderId: "201181105565"
+};
 
 
 @NgModule({
@@ -45,13 +56,17 @@ import { PageNotFoundComponent } from './src/app/page-not-found/page-not-found.c
     FoodItemComponent,
     LoginComponent,
     SignupComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutesModule
+    AppRoutesModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [PetService],
   bootstrap: [AppComponent]

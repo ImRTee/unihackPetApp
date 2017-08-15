@@ -12,14 +12,15 @@ export class PetComponent implements OnInit {
   petName: string;
   constructor(private petService: PetService) { }
 
+  
   ngOnInit() {
     this.petObj = this.petService.getPetObj();
-    this.petService.petNamed.subscribe(
-      (name: string) => {
-        console.log(name);
-        this.petObj.name = name;
-    }
-    );
+    setTimeout(() => {
+      this.petService.petNamed.subscribe(
+        (name: string) => {
+          console.log(name);
+          this.petObj.name = name;
+        });
+    }, 2000);
   }
-
 }
