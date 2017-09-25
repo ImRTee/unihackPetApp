@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PetService} from "../../../pet.service";
+import {PetService} from "../../pet.service";
 import {Pet} from "../../shared/pet.module";
 
 @Component({
@@ -12,7 +12,7 @@ export class PetComponent implements OnInit {
   petName: string;
   constructor(private petService: PetService) { }
 
-  
+
   ngOnInit() {
     this.petObj = this.petService.getPetObj();
     setTimeout(() => {

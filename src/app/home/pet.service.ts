@@ -1,5 +1,5 @@
-import {Food} from "./home/shared/food.module";
-import {Pet} from "./home/shared/pet.module";
+import {Food} from "./shared/food.module";
+import {Pet} from "./shared/pet.module";
 import {Subject} from "rxjs/Subject";
 
 export class PetService {

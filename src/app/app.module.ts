@@ -18,7 +18,7 @@ import { StomachComponent } from './home/main/stomach/stomach.component';
 import { FoodListComponent } from './home/main/stomach/food-list/food-list.component';
 import {FoodDesComponent} from './home/main/stomach/food-des/food-des.component';
 import { FoodItemComponent } from './home/main/stomach/food-list/food-item/food-item.component';
-import {PetService} from './pet.service';
+import {PetService} from './home/pet.service';
 import { LoginComponent } from './authentication/login/login.component';
 import { SignupComponent } from './authentication/signup/signup.component';
 import {AppRoutesModule} from "./app-routing.module";
@@ -29,12 +29,12 @@ import {AngularFireDatabaseModule} from "angularfire2/database";
 import { NavBarComponent } from './home/nav-bar/nav-bar.component';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyB2igeX7J0wK0-b2l8P-7p7xgGxY6jvJG0",
-  authDomain: "virtual-pet-2017.firebaseapp.com",
-  databaseURL: "https://virtual-pet-2017.firebaseio.com",
-  projectId: "virtual-pet-2017",
-  storageBucket: "virtual-pet-2017.appspot.com",
-  messagingSenderId: "201181105565"
+  apiKey: "AIzaSyCUpZwcsSu6Vy2diynHZ4r2JlAYh45TFV0",
+  authDomain: "unipet-project.firebaseapp.com",
+  databaseURL: "https://unipet-project.firebaseio.com",
+  projectId: "unipet-project",
+  storageBucket: "unipet-project.appspot.com",
+  messagingSenderId: "598895231080"
 };
 
 

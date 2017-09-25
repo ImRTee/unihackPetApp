@@ -1,8 +1,20 @@
-<div class="container-fluid">
+<div class="container-fluid home">
   <div class="status-container" style="margin-top: 10px">
     <app-status [pet]="petObj"></app-status>
   </div>
+
   <div class="main-container" style="margin-top: 30px">
     <app-main></app-main>
+
   </div>
+  <div class="feed-container">
+    <app-feed *ngIf="isFeeding"></app-feed>
+  </div>
+
+  <div class="navbar-container">
+    <app-nav-bar></app-nav-bar>
+  </div>
+
+ <button class="btn btn-primary feed-btn" (click)="onFeed()">+</button>
 </div>
+

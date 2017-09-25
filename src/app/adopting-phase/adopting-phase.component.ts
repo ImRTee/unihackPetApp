@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Pet} from "../home/shared/pet.module";
-import {PetService} from "../pet.service";
+import {PetService} from "../home/pet.service";
 import {Router} from "@angular/router";
 
 @Component({

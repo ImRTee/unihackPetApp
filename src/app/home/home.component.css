@@ -1,0 +1,28 @@
+.home{
+  position: relative;
+  height: 100vh;
+}
+
+.navbar-container{
+  position: fixed;
+  bottom: 0;
+  left:50%;
+  transform: translate(-50%,0);
+}
+
+.feed-btn{
+  position: fixed;
+  bottom: 15px;
+  left:35px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+}
+
+.feed-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

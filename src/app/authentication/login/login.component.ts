@@ -34,12 +34,10 @@ export class LoginComponent implements OnInit {
   loginGoogle() {
     this.afAuth.auth.signInWithPopup(this.provider).then(
       (userInfo) => {
-
         this.router.navigate(['/quizz', userInfo.additionalUserInfo.profile.name]);;
         console.log(userInfo);
       });
   }
-
   logout() {
     this.afAuth.auth.signOut();
   }
